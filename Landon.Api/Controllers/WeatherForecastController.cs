@@ -20,7 +20,10 @@ namespace Landon.Api.Controllers
         public IEnumerable<Customer> Get() => _context.Customers.ToList();
 
         [HttpGet("{id}")]
-        public Customer Get(string id) => _context.Customers
+        public Customer Get(string id)
+            => _context
+            .Customers
+            .AsEnumerable()
             .FirstOrDefault(c => c.Id.Equals(id, StringComparison.InvariantCultureIgnoreCase));
 
         [HttpPost]

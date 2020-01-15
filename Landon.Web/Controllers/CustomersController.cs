@@ -23,9 +23,25 @@ namespace Landon.Web.Controllers
             }
         }
 
-        public async Task<IActionResult> Edit(string id)
+        public IActionResult Detail(string id)
         {
-            return View(id);
+            return View(model: id);
+        }
+    }
+
+    public class CountriesController : Controller
+    {
+        public async Task<IActionResult> Index()
+        {
+            using (var httpClient = new HttpClient()
+            {
+                BaseAddress = new Uri("http://localhost:5000")
+            })
+            {
+                var json = await httpClient.GetStringAsync("Countries");
+                var countries = JsonConvert.DeserializeObject<IEnumerable<Country>>(json);
+                return View(countries);
+            }
         }
     }
 }

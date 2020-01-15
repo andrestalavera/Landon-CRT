@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Landon.Api", "Landon.Api\La
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns.IoC", "Patterns.IoC\Patterns.IoC.csproj", "{12F4D70A-8D74-4D0C-B10C-AE79CAF6E22F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Landon.Web", "Landon.Web\Landon.Web.csproj", "{C48C56F0-AD9C-423E-8EE4-0991DC77F9FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,18 @@ Global
 		{12F4D70A-8D74-4D0C-B10C-AE79CAF6E22F}.Release|x64.Build.0 = Release|Any CPU
 		{12F4D70A-8D74-4D0C-B10C-AE79CAF6E22F}.Release|x86.ActiveCfg = Release|Any CPU
 		{12F4D70A-8D74-4D0C-B10C-AE79CAF6E22F}.Release|x86.Build.0 = Release|Any CPU
+		{C48C56F0-AD9C-423E-8EE4-0991DC77F9FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C48C56F0-AD9C-423E-8EE4-0991DC77F9FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C48C56F0-AD9C-423E-8EE4-0991DC77F9FD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C48C56F0-AD9C-423E-8EE4-0991DC77F9FD}.Debug|x64.Build.0 = Debug|Any CPU
+		{C48C56F0-AD9C-423E-8EE4-0991DC77F9FD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C48C56F0-AD9C-423E-8EE4-0991DC77F9FD}.Debug|x86.Build.0 = Debug|Any CPU
+		{C48C56F0-AD9C-423E-8EE4-0991DC77F9FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C48C56F0-AD9C-423E-8EE4-0991DC77F9FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C48C56F0-AD9C-423E-8EE4-0991DC77F9FD}.Release|x64.ActiveCfg = Release|Any CPU
+		{C48C56F0-AD9C-423E-8EE4-0991DC77F9FD}.Release|x64.Build.0 = Release|Any CPU
+		{C48C56F0-AD9C-423E-8EE4-0991DC77F9FD}.Release|x86.ActiveCfg = Release|Any CPU
+		{C48C56F0-AD9C-423E-8EE4-0991DC77F9FD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

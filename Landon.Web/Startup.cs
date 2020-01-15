@@ -17,6 +17,7 @@ namespace Landon.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -29,6 +30,7 @@ namespace Landon.Web
 
             app.UseHttpsRedirection();
             app.UseRouting();
+            app.UseCors();
 
             app.UseEndpoints(endpoints => 
                 endpoints.MapControllerRoute(
