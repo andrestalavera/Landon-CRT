@@ -1,0 +1,8 @@
+@model IEnumerable<Country>
+
+<ul class="list-group">
+  @foreach (var country in Model)
+  {
+        <a asp-controller="Countries" asp-action="Detail" asp-route-id="@country.Id" class="list-group-item list-group-item-action">@country.Label</a>
+  }
+</ul>

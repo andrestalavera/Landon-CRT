@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using Landon.Models;
 using Landon.Data;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.EntityFrameworkCore;
 
 namespace Landon.Api.Controllers
 {
@@ -23,6 +24,11 @@ namespace Landon.Api.Controllers
         {
             return _context.Countries.ToList();
         }
+
+        [HttpGet("{id}")]
+        public Country Get(string id) 
+        => _context.Countries
+            .FirstOrDefault(c => c.Id == id);
 
         [HttpPost]
         public void Post(Country country)
