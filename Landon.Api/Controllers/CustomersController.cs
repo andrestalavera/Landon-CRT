@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Landon.Models;
@@ -48,7 +47,7 @@ namespace Landon.Api.Controllers
         public void Delete(string id)
         {
             var customer = _context.Customers
-                .FirstOrDefault(customer => 
+                .FirstOrDefault(customer =>
                 customer.Id.Equals(id, StringComparison.InvariantCultureIgnoreCase));
             _context.Customers.Remove(customer);
             _context.SaveChanges();

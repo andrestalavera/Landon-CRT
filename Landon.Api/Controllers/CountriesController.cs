@@ -26,16 +26,30 @@ namespace Landon.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        public Country Get(string id) 
+        public Country Get(string id)
         => _context.Countries
             .FirstOrDefault(c => c.Id == id);
 
+        //[HttpPost]
+        //public void Post(Country country)
+        //{
+        //    _context.Add(country);
+        //    //_context.Customers.Add(country);
+        //    _context.SaveChanges();
+        //}
+
         [HttpPost]
-        public void Post(Country country)
+        public void Post()
         {
-            _context.Add(country);
-            //_context.Customers.Add(country);
-            _context.SaveChanges();
+            for (int i = 15000; i < 25000; i++)
+            {
+                _context.Countries.Add(new Country
+                {
+                    Id = i.ToString(),
+                    Label = Faker.Name.Ethnicity()
+                });
+                _context.SaveChanges();
+            }
         }
 
         [HttpPut("{id}")]

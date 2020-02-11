@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Landon.Models;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net;
 using System.Threading.Tasks;
@@ -26,11 +29,7 @@ namespace Demo.Async
                 Console.ReadLine();
                 watch.Restart();
                 webClient.DownloadStringAsync(new Uri(api));
-                webClient.DownloadStringCompleted += (sender, e) =>
-                {
-                    var json = e.Result;
-                    Console.WriteLine("EAP ended : " + watch.ElapsedMilliseconds);
-                };
+                Console.WriteLine("EAP ended : " + watch.ElapsedMilliseconds);
             }
 
             {
@@ -39,8 +38,10 @@ namespace Demo.Async
                 watch.Restart();
                 var json = await webClient.DownloadStringTaskAsync(new Uri(api));
                 Console.WriteLine("TAP ended : " + watch.ElapsedMilliseconds);
-            }
+                watch.Stop();
 
+                var countries = JsonConvert.DeserializeObject<IEnumerable<Country>>(json);
+            }
         }
     }
 }
